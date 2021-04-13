@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/micasa/static/css/main.114026e7.chunk.css",
+    "main.js": "/micasa/static/js/main.ff366b60.chunk.js",
+    "main.js.map": "/micasa/static/js/main.ff366b60.chunk.js.map",
+    "runtime-main.js": "/micasa/static/js/runtime-main.bdf4cba0.js",
+    "runtime-main.js.map": "/micasa/static/js/runtime-main.bdf4cba0.js.map",
+    "static/css/2.764ccc25.chunk.css": "/micasa/static/css/2.764ccc25.chunk.css",
+    "static/js/2.f509f39a.chunk.js": "/micasa/static/js/2.f509f39a.chunk.js",
+    "static/js/2.f509f39a.chunk.js.map": "/micasa/static/js/2.f509f39a.chunk.js.map",
+    "index.html": "/micasa/index.html",
+    "precache-manifest.e72ffdacfd4dd19fa0e7803db50589a7.js": "/micasa/precache-manifest.e72ffdacfd4dd19fa0e7803db50589a7.js",
+    "service-worker.js": "/micasa/service-worker.js",
+    "static/css/2.764ccc25.chunk.css.map": "/micasa/static/css/2.764ccc25.chunk.css.map",
+    "static/css/main.114026e7.chunk.css.map": "/micasa/static/css/main.114026e7.chunk.css.map",
+    "static/js/2.f509f39a.chunk.js.LICENSE.txt": "/micasa/static/js/2.f509f39a.chunk.js.LICENSE.txt",
+    "static/media/common.scss": "/micasa/static/media/Robotobold.15a913e1.woff2",
+    "static/media/dashboard-article-dummy.jpg": "/micasa/static/media/dashboard-article-dummy.b2080f31.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bdf4cba0.js",
+    "static/css/2.764ccc25.chunk.css",
+    "static/js/2.f509f39a.chunk.js",
+    "static/css/main.114026e7.chunk.css",
+    "static/js/main.ff366b60.chunk.js"
+  ]
+}
