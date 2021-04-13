@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/micasa/static/css/main.114026e7.chunk.css",
-    "main.js": "/micasa/static/js/main.ef163fa0.chunk.js",
-    "main.js.map": "/micasa/static/js/main.ef163fa0.chunk.js.map",
+    "main.js": "/micasa/static/js/main.5ba239e6.chunk.js",
+    "main.js.map": "/micasa/static/js/main.5ba239e6.chunk.js.map",
     "runtime-main.js": "/micasa/static/js/runtime-main.bdf4cba0.js",
     "runtime-main.js.map": "/micasa/static/js/runtime-main.bdf4cba0.js.map",
     "static/css/2.764ccc25.chunk.css": "/micasa/static/css/2.764ccc25.chunk.css",
     "static/js/2.d3e6a0e3.chunk.js": "/micasa/static/js/2.d3e6a0e3.chunk.js",
     "static/js/2.d3e6a0e3.chunk.js.map": "/micasa/static/js/2.d3e6a0e3.chunk.js.map",
     "index.html": "/micasa/index.html",
-    "precache-manifest.4ab32f6441b8507c335c1effcb3a8814.js": "/micasa/precache-manifest.4ab32f6441b8507c335c1effcb3a8814.js",
+    "precache-manifest.f21317c4a710a2201b961435d033cd07.js": "/micasa/precache-manifest.f21317c4a710a2201b961435d033cd07.js",
     "service-worker.js": "/micasa/service-worker.js",
     "static/css/2.764ccc25.chunk.css.map": "/micasa/static/css/2.764ccc25.chunk.css.map",
     "static/css/main.114026e7.chunk.css.map": "/micasa/static/css/main.114026e7.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.764ccc25.chunk.css",
     "static/js/2.d3e6a0e3.chunk.js",
     "static/css/main.114026e7.chunk.css",
-    "static/js/main.ef163fa0.chunk.js"
+    "static/js/main.5ba239e6.chunk.js"
   ]
 }
