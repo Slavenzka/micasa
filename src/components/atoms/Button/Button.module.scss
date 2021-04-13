@@ -1,0 +1,100 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.button {
+  @include resetButton;
+  @include h3(400);
+
+  position: relative;
+  padding-right: 4rem;
+  padding-left: 4rem;
+  width: fit-content;
+  transition-duration: $transitionDuration;
+}
+
+.buttonFilled {
+  color: $colorLightest;
+  background-color: $colorBgHighlight;
+  border: 1px solid $colorBgHighlight;
+
+  &:hover {
+    color: $colorFontLightest;
+    background-color: $colorBgDarkest;
+    border-color: $colorBgDarkest;
+
+    .icon {
+      fill: $colorFontLightest;
+    }
+  }
+
+  &.buttonDisabled {
+    color: $colorFontItemPassive;
+    background-color: $colorBgTabs;
+    border-color: $colorBgTabs;
+  }
+}
+
+.buttonBordered {
+  background-color: transparent;
+  border: 1px solid $colorBgHighlight;
+
+  &:hover {
+    border-color: $colorBgDarkest;
+  }
+
+  &.buttonDisabled {
+    color: $colorFontItemPassive;
+    border-color: $colorBgSidebar;
+  }
+}
+
+.buttonText {
+  color: $colorRegularLightest;
+  padding: 0;
+
+  &:hover {
+    color: $colorRegular;
+
+    svg {
+      fill: $colorRegular;
+    }
+  }
+
+  &.buttonDisabled {
+    opacity: 0.5;
+  }
+}
+
+.buttonRegular {
+  min-height: 4rem;
+  border-radius: 2rem;
+}
+
+.buttonLarge {
+  min-height: 5rem;
+  border-radius: 2.5rem;
+}
+
+.buttonSmall {
+  min-height: 3rem;
+  border-radius: 2rem;
+}
+
+.buttonLoading {
+  pointer-events: none;
+}
+
+.buttonDisabled {
+  pointer-events: none;
+  cursor: inherit;
+  background-color: transparent;
+}
+
+.icon {
+  --spinner-size: 2rem;
+  position: absolute;
+  top: calc(50% - var(--spinner-size) / 2);
+  right: 1.5rem;
+  width: var(--spinner-size);
+  fill: $colorFontDarkest;
+}

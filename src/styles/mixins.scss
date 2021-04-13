@@ -1,0 +1,106 @@
+@import "variables";
+
+// font mixins
+@mixin logo($color: $colorHighlightDark) {
+  font-family: "Rototo", Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: $color;
+}
+
+@mixin h1 ($weight: 700, $color: $colorHighlightDark2) {
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: $weight;
+  line-height: 3.7rem;
+  color: $color;
+}
+
+@mixin h2 ($weight: 700, $color: $colorRegular) {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: $weight;
+  line-height: 2.1rem;
+  color: $color;
+}
+
+@mixin highlight ($color: $colorHighlightDark, $weight: 700) {
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 1.8rem;
+  font-weight: $weight;
+  line-height: 2.2rem;
+  color: $color;
+}
+
+@mixin h3 ($weight: 900, $color: $colorRegular) {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: $weight;
+  line-height: 1.9rem;
+  color: $color;
+}
+
+@mixin regular ($color: $colorRegular, $weight: 400) {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.4rem;
+  font-weight: $weight;
+  line-height: 1.6rem;
+  color: $color;
+}
+
+@mixin chartLink ($color: $colorRegularLightest) {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+  color: $color;
+}
+
+@mixin chartLabel ($color: $colorRegularLightest) {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.4rem;
+  color: $color;
+}
+
+@mixin axisLabel ($color: $colorRegularLightest) {
+  font-family: "Comfortaa", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  color: $color;
+}
+
+// reset mixins
+@mixin resetButton {
+  padding: 0;
+  font-size: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  cursor: pointer;
+}
+
+@mixin resetList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin resetFieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+@mixin resetInput {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+// style mixins

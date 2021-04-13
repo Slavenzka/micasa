@@ -1,0 +1,57 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+  position: relative;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1rem 1.25rem 2.7rem;
+  transition-duration: $transitionDuration;
+  //transition-property: opacity, font-weight, background-color, padding;
+
+  &:hover {
+    .icon {
+      svg {
+        fill: $colorHighlightDark;
+      }
+
+      .iconDummy {
+        background-color: $colorHighlightDark;
+      }
+    }
+
+    .label {
+      font-weight: 500;
+      color: $colorHighlightDark;
+    }
+  }
+}
+
+.icon {
+  display: block;
+
+  svg {
+    fill: $colorRegularLightest;
+    transition-duration: $transitionDuration;
+  }
+}
+
+.iconDummy {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background-color: $colorRegularLightest;
+  transition-duration: $transitionDuration;
+}
+
+.label {
+  @include h3(400, $colorRegularLightest);
+
+  margin-left: 1.2rem;
+  transition-duration: $transitionDuration;
+  transition-property: color;
+}

@@ -1,0 +1,8 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  @include regular;
+
+  margin: 0;
+}

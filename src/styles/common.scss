@@ -1,0 +1,97 @@
+@import "fonts";
+@import "mixins";
+@import "variables";
+
+html {
+  font-size: 10px;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background-color: $colorBgMain;
+  overflow: hidden;
+
+  .simplebar-scrollbar:before {
+    position: absolute;
+    content: '';
+    background: $colorBgScrollbar;
+    border-radius: 0.7rem;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity .2s linear
+  }
+
+  .simplebar-scrollbar.simplebar-visible:before {
+    opacity: 1;
+    transition: opacity 0s linear
+  }
+
+  .simplebar-track.simplebar-horizontal {
+    bottom: 0;
+
+    .simplebar-scrollbar:before {
+     height: 0.5rem;
+    }
+
+  }
+
+  .simplebar-track.simplebar-vertical {
+    top: 0;
+    right: -0.5rem;
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $colorBgSidebarActive;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+  scrollbar-width: thin;
+  scrollbar-color: $colorBgSidebarActive transparent;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  font-size: 0;
+}
+
+.ReactCollapse--collapse {
+  transition: height 500ms;
+}
+
+.calendar {
+  position: absolute;
+  bottom: 1rem;
+  right: 2rem;
+  width: 3rem;
+  fill: $colorBgDarkest;
+  pointer-events: none;
+}
+
+.iconSidebar {
+  width: 2.4rem;
+  fill: $colorRegularLightest;
+}

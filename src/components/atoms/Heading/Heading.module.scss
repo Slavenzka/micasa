@@ -1,0 +1,14 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.heading {
+  margin: 0;
+}
+
+.h2 {
+  @include h2;
+}
+
+.h3 {
+  @include h3(700);
+}

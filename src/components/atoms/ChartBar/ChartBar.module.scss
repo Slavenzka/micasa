@@ -1,0 +1,34 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+
+  :global {
+    .recharts-cartesian-grid-horizontal line {
+      stroke: $colorGrid;
+    }
+
+    .recharts-cartesian-axis-line {
+      stroke: $colorHighlightDarkMedium;
+    }
+
+    .recharts-text {
+      @include axisLabel;
+
+      fill: $colorRegularLightest;
+    }
+  }
+
+  .labelChart {
+    @include chartLabel;
+
+    fill: $colorRegularLightest;
+  }
+
+  .tooltip {
+    width: 10rem;
+  }
+}

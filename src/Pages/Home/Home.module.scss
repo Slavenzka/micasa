@@ -1,0 +1,21 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.payments {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.debts {
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+}
+
+.article {
+  grid-row: 3 / 5;
+  height: 100%;
+}
+
+.popular {
+  grid-column: 1 / -1;
+}

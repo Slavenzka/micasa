@@ -1,0 +1,31 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.list {
+  @include resetList;
+
+  display: flex;
+  align-items: center;
+
+  .item {
+    &:not(:first-child) {
+      margin-left: 1.2rem;
+    }
+  }
+
+  .button {
+    @include regular($colorRegularLightest);
+
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .icon {
+    margin-right: 0.3rem;
+    width: 1.8rem;
+  }
+
+  .iconLike {
+    fill: $colorRegularLightest;
+  }
+}

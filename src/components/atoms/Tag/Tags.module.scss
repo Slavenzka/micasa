@@ -1,0 +1,18 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.list {
+  @include resetList;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item {
+  @include chartLabel;
+
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}

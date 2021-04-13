@@ -1,0 +1,27 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.5rem;
+  padding-bottom: 4.3rem;
+  background-color: $colorLightest;
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.14);
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    width: 100%;
+    border-radius: 0;
+
+    .icon {
+      margin-right: 1.1rem;
+      width: 2.4rem;
+      fill: $colorRegularLightest;
+      transition-duration: $transitionDuration;
+    }
+  }
+}

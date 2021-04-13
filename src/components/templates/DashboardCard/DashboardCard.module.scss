@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0.2rem 0.2rem 1rem $colorShadowRegular;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 2.4rem;
+  background-color: $colorLightest;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
