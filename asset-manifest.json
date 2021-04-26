@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/micasa/static/css/main.fca8a2cb.chunk.css",
-    "main.js": "/micasa/static/js/main.fa44dd06.chunk.js",
-    "main.js.map": "/micasa/static/js/main.fa44dd06.chunk.js.map",
+    "main.css": "/micasa/static/css/main.bf7477f9.chunk.css",
+    "main.js": "/micasa/static/js/main.15374901.chunk.js",
+    "main.js.map": "/micasa/static/js/main.15374901.chunk.js.map",
     "runtime-main.js": "/micasa/static/js/runtime-main.bdf4cba0.js",
     "runtime-main.js.map": "/micasa/static/js/runtime-main.bdf4cba0.js.map",
-    "static/css/2.f1c2ac64.chunk.css": "/micasa/static/css/2.f1c2ac64.chunk.css",
-    "static/js/2.06f29721.chunk.js": "/micasa/static/js/2.06f29721.chunk.js",
-    "static/js/2.06f29721.chunk.js.map": "/micasa/static/js/2.06f29721.chunk.js.map",
+    "static/css/2.2cba102f.chunk.css": "/micasa/static/css/2.2cba102f.chunk.css",
+    "static/js/2.d9c41f6c.chunk.js": "/micasa/static/js/2.d9c41f6c.chunk.js",
+    "static/js/2.d9c41f6c.chunk.js.map": "/micasa/static/js/2.d9c41f6c.chunk.js.map",
     "index.html": "/micasa/index.html",
-    "precache-manifest.a51c5a7c12a31e24e7d252f02205621f.js": "/micasa/precache-manifest.a51c5a7c12a31e24e7d252f02205621f.js",
+    "precache-manifest.7a68660500add0d04e50d1a2c9aa42d2.js": "/micasa/precache-manifest.7a68660500add0d04e50d1a2c9aa42d2.js",
     "service-worker.js": "/micasa/service-worker.js",
-    "static/css/2.f1c2ac64.chunk.css.map": "/micasa/static/css/2.f1c2ac64.chunk.css.map",
-    "static/css/main.fca8a2cb.chunk.css.map": "/micasa/static/css/main.fca8a2cb.chunk.css.map",
-    "static/js/2.06f29721.chunk.js.LICENSE.txt": "/micasa/static/js/2.06f29721.chunk.js.LICENSE.txt",
+    "static/css/2.2cba102f.chunk.css.map": "/micasa/static/css/2.2cba102f.chunk.css.map",
+    "static/css/main.bf7477f9.chunk.css.map": "/micasa/static/css/main.bf7477f9.chunk.css.map",
+    "static/js/2.d9c41f6c.chunk.js.LICENSE.txt": "/micasa/static/js/2.d9c41f6c.chunk.js.LICENSE.txt",
     "static/media/common.scss": "/micasa/static/media/Robotobold.15a913e1.woff2",
     "static/media/dashboard-article-dummy.jpg": "/micasa/static/media/dashboard-article-dummy.b2080f31.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.bdf4cba0.js",
-    "static/css/2.f1c2ac64.chunk.css",
-    "static/js/2.06f29721.chunk.js",
-    "static/css/main.fca8a2cb.chunk.css",
-    "static/js/main.fa44dd06.chunk.js"
+    "static/css/2.2cba102f.chunk.css",
+    "static/js/2.d9c41f6c.chunk.js",
+    "static/css/main.bf7477f9.chunk.css",
+    "static/js/main.15374901.chunk.js"
   ]
 }
