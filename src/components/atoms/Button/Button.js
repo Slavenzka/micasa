@@ -21,6 +21,7 @@ const Button = ({
         [css.buttonFilled]: palette === ButtonPalettes.FILLED,
         [css.buttonBordered]: palette === ButtonPalettes.BORDERED,
         [css.buttonText]: palette === ButtonPalettes.TEXT,
+        [css.buttonTextBold]: palette === ButtonPalettes.TEXT_BOLD,
         [css.buttonRegular]: height === ButtonHeights.REGULAR,
         [css.buttonLarge]: height === ButtonHeights.LARGE,
         [css.buttonSmall]: height === ButtonHeights.SMALL,

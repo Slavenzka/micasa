@@ -4,8 +4,8 @@ import classnames from 'classnames'
 import { withRouter } from 'react-router-dom'
 import IconUser from 'assets/icons/IconUser'
 import Logo from 'components/atoms/Logo/Logo'
-import Button from 'components/atoms/Button/Button'
-import { ButtonHeights, ButtonPalettes } from 'utils/const'
+import Link from 'components/atoms/Link/Link'
+import { USER_PROFILE } from 'Pages/Routes'
 
 const Header = ({
   className,
@@ -19,15 +19,13 @@ const Header = ({
       style={{...style}}
     >
       <Logo />
-      <Button
-        onClick={() => {}}
+      <Link
+        to={USER_PROFILE}
         className={css.button}
-        palette={ButtonPalettes.TEXT}
-        height={ButtonHeights.CONTENT}
       >
         { role }
         <IconUser className={css.icon} />
-      </Button>
+      </Link>
     </header>
   )
 }

@@ -4,7 +4,7 @@ import 'normalize.css'
 import 'styles/common.scss'
 import { Provider } from 'react-redux'
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, HashRouter } from 'react-router-dom'
 import ViewSwitcher from 'ViewSwitcher/ViewSwitcher'
 import configureStore from 'store/configureStore'
 
@@ -12,9 +12,9 @@ const store = configureStore()
 
 const Content = (
   <Provider store={store}>
-    <BrowserRouter>
+    <HashRouter>
       <ViewSwitcher />
-    </BrowserRouter>
+    </HashRouter>
   </Provider>
 )
 

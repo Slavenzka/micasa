@@ -1,0 +1,74 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  @include regular($colorRegularLightest);
+
+  display: inline-block;
+  margin-bottom: 0.7rem;
+}
+
+.input {
+  @include resetInput;
+  @include tableCell($colorRegular, 400);
+
+  padding: 1.4rem 1.2rem 0.7rem 1.2rem;
+  height: 4.1rem;
+  border: 1px solid $colorRegularLightest;
+  border-radius: 1rem;
+  transition-duration: $transitionDuration;
+
+  &:hover,
+  &:focus {
+    border-color: $colorBgDarkest;
+  }
+
+  &.inputError,
+  &.inputError:hover,
+  &.inputError:focus {
+    border-color: $colorError;
+  }
+}
+
+.inputDisabled,
+.inputDisabled:hover,
+.inputDisabled:focus {
+  background-color: $colorBgTabs;
+  border-color: $colorBorderInputPassive;
+  pointer-events: none;
+}
+
+.wrapperCash {
+  position: relative;
+
+  &::before {
+    @include tableCell($colorRegular, 400);
+
+    content: "€";
+    position: absolute;
+    bottom: 1.5rem;
+    left: 2rem;
+  }
+
+  .input {
+    padding-left: 3.5rem;
+  }
+}
+
+.inputSearch {
+  padding-right: 4rem;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% - 2rem / 2);
+  right: 1.5rem;
+  width: 2rem;
+  fill: $colorRegular;
+}

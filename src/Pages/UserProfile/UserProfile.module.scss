@@ -1,0 +1,59 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  padding-right: 19rem;
+  padding-bottom: 16rem;
+  width: 93rem;
+
+  .form {
+    display: grid;
+    grid-template-columns: 45rem minmax(0, 1fr);
+    grid-gap: 1.6rem 3rem;
+    margin-top: 2.4rem;
+  }
+
+  .input input {
+    background-color: transparent;
+    border-color: $colorRegularLightest;
+  }
+
+  .buttonEditPhone {
+    @include resetButton;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 1.25rem;
+
+    .iconEdit {
+      width: 1.5rem;
+      fill: $colorRegularLightest;
+      transition-duration: $transitionDuration;
+    }
+
+    &:hover {
+      .iconEdit {
+        fill: $colorRegular;
+      }
+    }
+  }
+
+  .buttonEditPassword {
+    @include resetButton;
+    @include chartLabel($colorHighlightDark);
+
+    position: absolute;
+    bottom: -2.2rem;
+    right: 0;
+  }
+
+  .controls {
+    margin-left: auto;
+    width: 45rem;
+  }
+}
+
+.modal {
+  width: 51rem;
+}

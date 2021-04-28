@@ -1,0 +1,66 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.cell {
+  @include tableCell($colorRegular, 400);
+
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 1rem 0 0;
+  max-height: 100%;
+  text-transform: none;
+  transition-duration: $transitionDuration;
+  transition-property: text-decoration;
+
+  &:not(.cellOrderStatus):not(.cellText) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    & > * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+  }
+}
+
+.cellHovered {
+  font-weight: 500;
+}
+
+.cellStatus {
+  text-transform: lowercase;
+}
+
+.amountDebt {
+  color: $colorError;
+}
+
+.link {
+  @include tableCell($colorRegular, 400);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.iconConfirmed {
+  margin-left: auto;
+  width: 3rem;
+  fill: $colorHighlightConfirm;
+}
+
+.buttonEdit {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 0;
+
+  .icon {
+    fill: $colorRegularLightest;
+    width: 2rem;
+    transition-duration: $transitionDuration;
+  }
+}

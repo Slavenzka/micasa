@@ -37,7 +37,7 @@ const ChartBar = ({
         }
       })
     }
-  }, [fontSize, toolTipRef])
+  }, [fontSize, toolTipRef, gridRef, barWidth])
 
   const getTooltipProps = () => ({
     className: css.tooltip,

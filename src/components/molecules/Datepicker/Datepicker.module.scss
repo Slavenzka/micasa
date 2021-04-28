@@ -1,0 +1,367 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+
+  &:hover {
+    .iconCalendar {
+      fill: $colorBgDarkest;
+    }
+  }
+
+  .labelContent {
+    color: $colorFontLightest;
+    margin-left: auto;
+    transition-duration: $transitionDuration;
+    transition-property: color;
+
+    &Active {
+      color: $colorFontHighlight;
+    }
+  }
+
+  .iconCalendar {
+    margin-left: 1rem;
+    width: 1.5rem;
+    fill: $colorFontHighlight;
+  }
+
+  .datepicker {
+    --daypicker-padding-h: 1.8rem;
+    :global {
+      .DayPicker {
+          &-wrapper {
+          padding-bottom: 0;
+          background-color: $colorBgLightest;
+        }
+
+        &-Caption {
+          display: block;
+          padding: 1.6rem 0 0 0;
+        }
+
+        &-Weekdays {
+          position: relative;
+          display: block;
+          margin: 1.6rem 0 0 0;
+          padding-bottom: 0.8rem;
+          width: 100%;
+          //vertical-align: center;
+          height: auto !important;
+          box-sizing: border-box;
+
+          &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: calc(-1 * var(--daypicker-padding-h) / 2);
+            width: calc(100% + 2 * var(--daypicker-padding-h) / 2 );
+            height: 1px;
+            background-color: $colorBorderDatepicker;
+          }
+        }
+
+        &-WeekdaysRow {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        &-Weekday {
+          @include chartLabel($colorRegular, 700);
+
+          display: block;
+          padding: 0;
+          text-transform: capitalize;
+          text-align: center
+        }
+
+        &-Body {
+          display: grid;
+          grid-template-columns: repeat(7, 1fr);
+          grid-row-gap: 1.2rem;
+          margin-top: 0.8rem;
+        }
+
+        &-Months {
+          padding: 0 var(--daypicker-padding-h);
+        }
+
+        &-Month {
+          display: grid;
+          grid-template-rows: repeat(3, auto);
+          margin: 0;
+          width: calc(7 * 3rem);
+
+          &:not(:first-child) {
+            margin-left: 2rem;
+          }
+        }
+
+        &-Week {
+          grid-column: 1 / -1;
+
+          & > div:last-child {
+            border-top-right-radius: 50% !important;
+            border-bottom-right-radius: 50% !important;
+          }
+          & > div:first-child {
+            border-top-left-radius: 50% !important;
+            border-bottom-left-radius: 50% !important;
+          }
+        }
+
+        &-Day--selected:not(.DayPicker-Day--start):not(.DayPicker-Day--end):not(.DayPicker-Day--outside) {
+          background-color: $colorBgHighlight !important;
+          color: $colorHighlightDark;
+        }
+
+        &-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+          background-color: $colorHighlightDark;
+        }
+
+        &-Day {
+          @include chartLabel($colorRegular);
+
+          padding: 0;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+
+          &--disabled,
+          &--outside {
+            opacity: 0.3;
+
+            &.DayPicker-Day--today {
+              &::before {
+                display: none;
+              }
+            }
+          }
+
+          &--start:not(.DayPicker-Day--firstSelected) {
+            position: relative;
+            z-index: 1;
+
+            & + div,
+            .DayPicker-Day--lastSelected {
+              position: relative;
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -35%;
+                width: 35%;
+                height: 100%;
+                background-color: $colorHighlightDarkTransparent;
+                z-index: 0;
+              }
+            }
+          }
+
+          &--highlighted:not(.DayPicker-Day--start):not(.DayPicker-Day--end) {
+            background-color: $colorHighlightDarkTransparent;
+            border-radius: 0;
+
+            &:hover {
+              color: $colorLightest;
+              background-color: $colorHighlightDark !important;
+            }
+          }
+
+          &--today {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              bottom: 0.5rem;
+              left: calc(50% - 1.5rem / 2);
+              width: 1.5rem;
+              height: 1px;
+              background-color: $colorRegular;
+            }
+          }
+        }
+      }
+
+      .DayPicker-Day--lastSelected {
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 32%;
+          height: 100%;
+          background-color: $colorHighlightDarkTransparent;
+          z-index: 0;
+        }
+      }
+
+      .DayPicker-Day:not(.DayPicker-Day--highlighted):not(.DayPicker-Day--disabled):not(.DayPicker-Day--selected):not(.DayPicker-Day--outside):hover {
+        background-color: transparent !important;
+        box-shadow: inset 0 0 0 1px $colorHighlightDark;
+      }
+
+      .rdrMonthAndYearPickers {
+        @include regular;
+
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+
+      .rdrDayPassive {
+        .rdrDayNumber > span {
+          opacity: 0.3;
+        }
+      }
+
+      .rdrDayHovered {
+        .rdrDayStartPreview,
+        .rdrDayEndPreview {
+          border-color: $colorBorderInputPassive;
+        }
+      }
+    }
+  }
+}
+
+.background {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 1;
+}
+
+.content {
+  position: absolute;
+  top: calc(100% + 1.3rem);
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0.3rem 2.5rem 0 rgba(0, 0, 0, 0.15);
+  border-radius: 0.8rem;
+  z-index: 1;
+}
+
+.contentRange {
+  box-shadow: none;
+}
+
+.controls {
+  margin-left: auto;
+  padding: 1rem 1.6rem 1.6rem 1.6rem;
+}
+
+.button {
+  padding: 0 2rem;
+  width: 14rem;
+
+  &:not(:first-child) {
+    margin-left: 2rem;
+  }
+}
+
+.datepicker:not(.datepickerEnd) {
+  :global {
+    .DayPicker {
+      &-Day {
+        &--lastSelected {
+          position: relative;
+          color: $colorRegular;
+          background-color: $colorHighlightDarkTransparent !important;
+          border-radius: 50% !important;
+          z-index: 1;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: inset 0 0 0 1px $colorHighlightDark;
+          }
+
+          & + div {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -100%;
+              width: 35%;
+              height: 100%;
+              background-color: $colorHighlightDarkTransparent;
+              z-index: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.datepickerEnd {
+  :global {
+    .DayPicker {
+      &-Day--selected:not(.DayPicker-Day--disabled):not(.DayPicker-Day--outside) {
+        color: $colorRegular;
+        background-color: $colorHighlightDarkTransparent !important;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          box-shadow: inset 0 0 0 1px $colorHighlightDark;
+        }
+      }
+
+      &-Day {
+        &--start {
+          & + div::before {
+            left: -100% !important;
+          }
+        }
+
+        &:not(.DayPicker-Day--highlighted) + .DayPicker-Day--highlighted {
+          position: relative;
+          color: $colorLightest !important;
+          background-color: $colorHighlightDark !important;
+          border-radius: 50% !important;
+          z-index: 2;
+
+          & + div {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -35%;
+              width: 35%;
+              height: 100%;
+              background-color: $colorHighlightDarkTransparent;
+              z-index: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

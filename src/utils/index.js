@@ -150,15 +150,6 @@ export const getUniqueFormErrors = errors => {
     if (total.indexOf(errorMessage) < 0) {
       total.push(errorMessage)
     }
-
-    // const errorType = errors?.[key]?.type
-    //
-    // if (!(errorType in total)) {
-    //   total[errorType] = errorType === `required`
-    //     ? `Please, fill all obligatory fields`
-    //     : errors[key].message
-    // }
-
     return total
   }, [])
 }

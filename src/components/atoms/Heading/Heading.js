@@ -15,6 +15,7 @@ const Heading = ({
   return (
     <TagName
       className={classnames(css.heading, className, {
+        [css.h1]: type === HeadingTypes.H1,
         [css.h2]: type === HeadingTypes.H2,
         [css.h3]: type === HeadingTypes.H3,
       })}
@@ -31,7 +32,7 @@ Heading.propTypes = {
   /*
   * Heading style presets
   */
-  type: PropTypes.oneOf([HeadingTypes.H2, HeadingTypes.H3]),
+  type: PropTypes.oneOf([HeadingTypes.H1, HeadingTypes.H2, HeadingTypes.H3]),
   /*
    * TagName property to manage tag independently from style presets
    */

@@ -1,0 +1,52 @@
+@import "../../../../styles/mixins";
+
+.list {
+  @include resetList;
+
+  display: flex;
+  flex-direction: column;
+
+  .item {
+    @include regular;
+  }
+
+  .circle {
+    margin-right: 0.4rem;
+    width: 0.6rem;
+  }
+}
+
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 5.4rem;
+  width: 19.5rem;
+  height: 100%;
+  background-color: $colorHighlightDarkLight;
+
+  .value {
+    @include h0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.2rem;
+    width: 9.2rem;
+    height: 9.2rem;
+    border: 0.5rem solid $colorHighlightDark;
+    border-radius: 50%;
+  }
+}
+
+.chart {
+  :global {
+    .recharts-legend-item-text {
+      @include regular;
+
+      color: $colorRegular !important;
+    }
+  }
+}

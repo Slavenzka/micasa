@@ -1,0 +1,19 @@
+.columns {
+  grid-template-columns:
+    calc(140 / 1080 * 100%)
+    calc(126 / 1080 * 100%)
+    calc(150 / 1080 * 100%)
+    calc(400 / 1080 * 100%)
+    calc(156 / 1080 * 100%)
+    1fr;
+}
+
+.search {
+  margin-left: auto;
+}
+
+.formAux {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 1.5rem;
+}

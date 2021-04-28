@@ -1,0 +1,44 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1.8rem;
+}
+
+.backlink {
+  @include regular($colorRegularLighter, 700);
+
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  opacity: 0.7;
+  transition-duration: $transitionDuration;
+
+  .icon {
+    margin-right: 0.8rem;
+    width: 2rem;
+    fill: $colorRegularLighter;
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.top {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+
+.heading {
+  grid-column: 1 / 2;
+}
+
+.link {
+  grid-column: 2 / 3;
+  margin-left: auto;
+}

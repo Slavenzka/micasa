@@ -9,11 +9,19 @@
   color: $color;
 }
 
-@mixin h1 ($weight: 700, $color: $colorHighlightDark2) {
+@mixin h0 ($weight: 700, $color: $colorHighlightDark2) {
   font-family: "Montserrat", Arial, sans-serif;
   font-size: 3rem;
   font-weight: $weight;
   line-height: 3.7rem;
+  color: $color;
+}
+
+@mixin h1 ($weight: 700, $color: $colorRegular) {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 2.2rem;
+  font-weight: $weight;
+  line-height: 2.6rem;
   color: $color;
 }
 
@@ -41,6 +49,22 @@
   color: $color;
 }
 
+@mixin tableCell($color: $colorRegular, $weight: 500) {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.6rem;
+  font-weight: $weight;
+  line-height: 1.9rem;
+  color: $color;
+}
+
+@mixin strong ($color: $colorRegular, $weight: 500) {
+  font-family: "Roboto", Arial, sans-serif;
+  font-size: 1.5rem;
+  font-weight: $weight;
+  line-height: 1.8rem;
+  color: $color;
+}
+
 @mixin regular ($color: $colorRegular, $weight: 400) {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 1.4rem;
@@ -57,10 +81,10 @@
   color: $color;
 }
 
-@mixin chartLabel ($color: $colorRegularLightest) {
+@mixin chartLabel ($color: $colorRegularLightest, $weight: 400) {
   font-family: "Roboto", Arial, sans-serif;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: $weight;
   line-height: 1.4rem;
   color: $color;
 }

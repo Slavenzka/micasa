@@ -1,0 +1,23 @@
+@import "styles/variables";
+
+.columns {
+  grid-template-columns:
+    calc(193 / 1080 * 100%)
+    calc(177 / 1080 * 100%)
+    calc(206 / 1080 * 100%)
+    calc(211 / 1080 * 100%)
+    calc(172 / 1080 * 100%)
+    1fr;
+}
+
+.datePicker {
+  margin-left: 2rem;
+}
+
+.sort {
+  margin-left: auto;
+}
+
+.search {
+  margin-left: 2rem;
+}

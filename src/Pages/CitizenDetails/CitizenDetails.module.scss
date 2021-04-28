@@ -1,0 +1,36 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.general {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.transactions {
+  grid-column: 2 / 3;
+  grid-row: 1  / 3;
+}
+
+.buttonTransactions {
+  @include regular($colorRegularLightest);
+
+  margin: 1.2rem auto 0 auto;
+}
+
+.applications {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4;
+}
+
+.debts {
+  grid-column: 2 / 3;
+  grid-row: 3 / 5;
+
+  table {
+    border-bottom: none;
+  }
+}
+
+.buttonReminder {
+  margin: 1.2rem auto 0 auto;
+}

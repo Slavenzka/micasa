@@ -1,0 +1,10 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: 45rem 57rem;
+  grid-template-rows:
+    minmax(31rem, auto)
+    minmax(5.3rem, auto)
+    14.5rem
+    10rem;
+  grid-gap: 3rem;
+}

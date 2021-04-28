@@ -1,0 +1,82 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+}
+
+.list {
+  @include resetList;
+
+  position: absolute;
+  top: calc(100% + 0.2rem);
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem 1.8rem;
+  z-index: 2;
+  background-color: $colorBgLightest;
+  box-shadow: 0 0.2rem 0.4rem $colorShadowRegular;
+}
+
+.item {
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+.buttonVisibility {
+  @include resetButton;
+  @include regular;
+
+  position: relative;
+  padding-right: 2rem;
+  height: auto;
+  text-transform: none;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: calc(50% - 0.7rem / 2);
+    right: 0;
+    border-bottom: 0.7rem solid $colorRegular;
+    border-right: 0.6rem solid transparent;
+    border-left: 0.6rem solid transparent;
+    transition-duration: $transitionDuration;
+  }
+}
+
+.buttonVisibilityOpen {
+  &::before {
+    transform: rotate(180deg);
+  }
+}
+
+.buttonSelect {
+  @include resetButton;
+  @include regular;
+
+  line-height: 1.4rem;
+  transition-duration: $transitionDuration;
+
+  &:hover {
+    color: $colorFontDarkest;
+  }
+}
+
+.buttonSelectActive {
+  position: relative;
+  color: $colorFontLightest;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -0.4rem;
+    left: -1.2rem;
+    width: calc(100% + 1.2rem * 2);
+    height: calc(100% + 0.5rem * 2);
+    background-color: $colorHighlightDark;
+    border-radius: 1.2rem;
+    z-index: -1;
+  }
+}

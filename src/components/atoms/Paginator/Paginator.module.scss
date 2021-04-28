@@ -1,0 +1,94 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+  padding: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $colorHighlightDarkLight;
+  box-shadow: 0.2rem 0.2rem 1rem $colorShadowRegular;
+}
+
+.list {
+  @include resetList;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20rem;
+  margin: 0 2rem;
+}
+
+.item {
+  @include regular($colorHighlightDark, 700);
+
+  &:not(:first-child) {
+    margin-left: 1.7rem;
+  }
+}
+
+.button {
+  //@include regular($colorHighlightDark, 700);
+
+  position: relative;
+  font: inherit;
+  color: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -0.55rem;
+    left: -0.65rem;
+    width: calc(100% + 2 * 0.65rem);
+    height: 2.6rem;
+    border: 1px solid $colorHighlightDark;
+    border-radius: 0.5rem;
+    opacity: 0;
+    transition-duration: $transitionDuration;
+  }
+}
+
+.buttonActive {
+  &::before {
+    opacity: 1;
+  }
+}
+
+.controlBack {
+  //position: absolute;
+  //top: calc(50% - 2rem / 2);
+  //left: calc(50% - 16rem);
+  transform: rotate(180deg);
+}
+
+.forward {
+  //position: absolute;
+  //top: calc(50% - 2rem / 2);
+  //right: calc(50% - 16rem);
+}
+
+.controlLast {
+  margin-left: 1.5rem;
+  transform: rotate(0);
+
+  .iconLast {
+    &:last-child {
+      margin-left: -0.8rem;
+    }
+  }
+}
+
+.controlDisabled {
+  pointer-events: none;
+
+  .icon {
+    fill: $colorRegularLightest;
+  }
+}
+
+.icon {
+  width: 1.2rem;
+  fill: $colorHighlightDark;
+}

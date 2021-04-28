@@ -11,3 +11,9 @@
     text-decoration: none;
   }
 }
+
+.linkStrong {
+  @include strong($colorHighlightDark);
+
+  text-decoration: none;
+}

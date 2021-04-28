@@ -4,14 +4,18 @@ $adaptiveMax: 1200px;
 // colors
 $colorLightest: rgb(255, 255, 255);
 $colorRegular: rgb(83, 83, 83);
-$colorRegularLighter: rgba(121, 121, 121);
-$colorRegularLightest: rgba(151, 151, 151);
+$colorRegularLighter: rgb(121, 121, 121);
+$colorRegularLightest: rgb(151, 151, 151);
 $colorHighlightDark: rgb(52, 125, 114);
+$colorHighlightDarkTransparent: rgb(186, 211, 207);
 $colorHighlightDark2: rgb(95, 164, 153);
-$colorHighlightDarkMedium: rgba(117, 148, 145);
-$colorHighlightDarkLight: rgba(228, 238, 243);
+$colorHighlightDarkMedium: rgb(117, 148, 145);
+$colorHighlightDarkLight: rgb(228, 238, 243);
 $colorHighlightLight: rgb(255, 136, 102);
+$colorHighlightConfirm: rgb(107, 206, 88);
+$colorError: rgb(255, 18, 18);
 $colorGrid: rgb(245, 245, 245);
+$colorBorder: rgb(216, 216, 216);
 
 body {
   :global {

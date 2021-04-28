@@ -1,0 +1,31 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+}
+
+.descriptor {
+  @include tableCell($colorHighlightDark, 400);
+
+  display: inline-block;
+  margin-top: 1.6rem;
+}
+
+.schedule {
+  @include tableCell($colorRegular, 400);
+
+  display: flex;
+  align-items: center;
+  margin-top: 0.8rem;
+}
+
+.icon {
+  margin-right: 1rem;
+  width: 2rem;
+  fill: $colorHighlightDark;
+}
+
+.iconImage {
+  position: absolute;
+}

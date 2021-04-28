@@ -1,20 +1,23 @@
 import React from 'react'
-import css from 'components/templates/DashboardCard/DashboardCard.module.scss'
+import css from './DashboardCard.module.scss'
 import classnames from 'classnames'
 import Heading from 'components/atoms/Heading/Heading'
 
-const DashboardCard = ({
+const   DashboardCard = ({
   className,
+  classNameHeading,
   annex,
   tag = 'div',
   heading,
   children,
+  ...extraProps
 }) => {
   const TagName = tag
 
   return (
     <TagName
       className={classnames(css.wrapper, className)}
+      {...extraProps}
     >
       <div
         className={classnames(css.content, {
@@ -23,7 +26,7 @@ const DashboardCard = ({
       >
         {heading &&
           <Heading
-            className={css.heading}
+            className={classnames(css.heading, classNameHeading)}
           >
             { heading }
           </Heading>

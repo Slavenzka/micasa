@@ -8,14 +8,14 @@ import {
   dataRequests,
   pieData, popularData
 } from 'Pages/Home/_assets/dataChartsMock'
-import DashboardCardDebts from 'components/organisms/DashboardCardDebts/DashboardCardDebts'
-import DashboardCardRequests from 'components/organisms/DashboardCardRequests/DashboardCardRequests'
+import DashboardCardDebts from 'components/organisms/DashboardCards/DashboardCardDebts/DashboardCardDebts'
+import DashboardCardRequests from 'components/organisms/DashboardCards/DashboardCardRequests/DashboardCardRequests'
 import DashboardCardUtilities
-  from 'components/organisms/DashboardCardUtilities/DashboardCardUtilities'
+  from 'components/organisms/DashboardCards/DashboardCardUtilities/DashboardCardUtilities'
 import DashboardCardTopArticle
-  from 'components/organisms/DashboardCardTopArticle/DashboardCardTopArticle'
-import DashboardCardComment from 'components/organisms/DashboardCardComment/DashboardCardComment'
-import DashboardCardPopular from 'components/organisms/DashboardCardPopular/DashboardCardPopular'
+  from 'components/organisms/DashboardCards/DashboardCardTopArticle/DashboardCardTopArticle'
+import DashboardCardComment from 'components/organisms/DashboardCards/DashboardCardComment/DashboardCardComment'
+import DashboardCardPopular from 'components/organisms/DashboardCards/DashboardCardPopular/DashboardCardPopular'
 
 const Home = () => {
   return (

@@ -1,0 +1,175 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  position: relative;
+}
+
+.label {
+  @include regular($colorRegularLightest);
+
+  margin: 0 0 0.8rem 0;
+}
+
+.select {
+  width: 100%;
+
+  :global {
+    .simplebar-placeholder {
+      display: block;
+    }
+
+    .select {
+      &__control {
+        flex-wrap: nowrap;
+        height: 4rem;
+        min-height: 4rem;
+        border: 0.1rem solid $colorRegularLightest;
+        border-radius: 1rem;
+        cursor: pointer;
+        background-color: $colorLightest;
+
+        &:hover {
+          border-color: $colorHighlightDark;
+        }
+      }
+
+      &__control--is-disabled {
+        .select__dropdown-indicator svg {
+          fill: $colorFontHighlight;;
+        }
+      }
+
+      &__value-container {
+        padding: 0 0 0 2rem;
+        height: 100%;
+      }
+
+      &__input {
+        @include tableCell($colorRegular, 400);
+      }
+
+      &__placeholder {
+        @include tableCell($colorRegular, 400);
+
+        opacity: 0.5;
+      }
+
+      &__single-value {
+        @include tableCell($colorRegular, 400);
+
+        left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+      }
+
+      &__indicator-separator {
+        display: none;
+      }
+
+      &__indicators {
+        display: flex;
+        justify-content: center;
+        width: 4.6rem;
+      }
+
+      &__dropdown-indicator {
+        padding: 0;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+          fill: $colorFontDarkest;
+          transition-duration: $transitionDuration;
+        }
+      }
+
+      &__clear-indicator {
+        svg {
+          fill: $colorFontHighlight;
+          transition-duration: $transitionDuration;
+        }
+
+        &:hover {
+          svg {
+            opacity: 0.4;
+          }
+        }
+      }
+
+      &__menu {
+        margin-top: 1rem;
+        border-radius: 1rem;
+        border: 1px solid $colorBorderDatepickerDark;
+        box-shadow: none;
+        overflow: hidden;
+      }
+
+      &__option {
+        @include tableCell($colorRegular, 400);
+
+        &:hover,
+        &--is-focused {
+          background-color: $colorHighlightDarkTransparent;
+        }
+
+        &:not(.select__option--is-selected) {
+          cursor:pointer;
+        }
+      }
+    }
+  }
+}
+
+.selectError {
+  :global {
+    .select__control {
+      border-color: $colorFontWarning;
+
+      &:hover {
+        border-color: $colorFontWarning;
+      }
+    }
+
+    .select__dropdown-indicator {
+      svg {
+        fill: $colorFontWarning;
+      }
+    }
+  }
+}
+
+.selectLoading {
+  :global {
+    .select {
+      &__control {
+        pointer-events: none;
+      }
+
+      &__dropdown-indicator,
+      &__clear-indicator {
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
+  }
+}
+
+.selectDisabled {
+  pointer-events: none;
+
+  :global {
+    .select {
+      &__control {
+        background-color: $colorBgStats;
+        border: 1px solid $colorBgStats;
+      }
+
+      &__dropdown-indicator {
+        display: none;
+      }
+    }
+  }
+}

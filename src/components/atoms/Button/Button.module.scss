@@ -6,21 +6,21 @@
   @include h3(400);
 
   position: relative;
-  padding-right: 4rem;
-  padding-left: 4rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   width: fit-content;
   transition-duration: $transitionDuration;
 }
 
 .buttonFilled {
   color: $colorLightest;
-  background-color: $colorBgHighlight;
-  border: 1px solid $colorBgHighlight;
+  background-color: $colorHighlightDark;
+  border: 1px solid $colorHighlightDark;
 
   &:hover {
-    color: $colorFontLightest;
-    background-color: $colorBgDarkest;
-    border-color: $colorBgDarkest;
+    color: $colorRegular;
+    background-color: $colorHighlightDarkTransparent;
+    border-color: $colorHighlightDarkTransparent;
 
     .icon {
       fill: $colorFontLightest;
@@ -36,10 +36,10 @@
 
 .buttonBordered {
   background-color: transparent;
-  border: 1px solid $colorBgHighlight;
+  border: 1px solid $colorHighlightDark;
 
   &:hover {
-    border-color: $colorBgDarkest;
+    border-color: $colorHighlightDarkTransparent;
   }
 
   &.buttonDisabled {
@@ -65,6 +65,16 @@
   }
 }
 
+.buttonTextBold {
+  @include tableCell($colorHighlightDark, 500);
+
+  padding: 0;
+
+  &:hover {
+    color: $colorHighlightConfirm;
+  }
+}
+
 .buttonRegular {
   min-height: 4rem;
   border-radius: 2rem;
@@ -76,7 +86,7 @@
 }
 
 .buttonSmall {
-  min-height: 3rem;
+  min-height: 3.6rem;
   border-radius: 2rem;
 }
 

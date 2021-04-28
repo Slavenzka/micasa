@@ -1,0 +1,18 @@
+.heading {
+  grid-column: 1 / -1;
+  padding-bottom: 0.8rem;
+  text-align: center;
+}
+
+.controls {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 3rem;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.button {
+  width: 100%;
+}

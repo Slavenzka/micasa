@@ -5,6 +5,7 @@ import ElasticAdaptive from 'hoc/ElasticAdaptive'
 import { isBrowser, isMobile } from 'react-device-detect'
 import { setDeviceType } from 'store/actions'
 import { DeviceTypes } from 'utils/const'
+import withModal from 'hoc/withModal'
 
 const ViewSwitcher = () => {
   const type = useSelector(state => state.elastic.deviceType)
@@ -40,4 +41,4 @@ const ViewSwitcher = () => {
   )
 }
 
-export default ViewSwitcher
+export default withModal(ViewSwitcher)

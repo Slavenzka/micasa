@@ -1,0 +1,32 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.table {
+  margin-top: 5rem;
+  width: 100%;
+  border-collapse: collapse;
+  border-top: 1px solid $colorBorder;
+  border-bottom: 1px solid $colorBorder;
+}
+
+.row {
+  &:not(:first-child) {
+    border-top: 1px solid $colorBorder;
+  }
+}
+
+.cell {
+  @include tableCell($colorRegular, 400);
+
+  padding: 1.1rem 0 1rem 0;
+
+  &:last-child {
+    padding-right: 1rem;
+    width: 1%;
+    white-space: nowrap;
+  }
+}
+
+.cellWarning {
+  color: red;
+}

@@ -1,0 +1,14 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.button {
+  @include tableCell($colorHighlightDark);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 1.6rem 3rem;
+  padding: 0 3rem;
+  width: 51rem;
+}

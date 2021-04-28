@@ -1,0 +1,28 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.list {
+  @include resetList;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item {
+  &:not(:first-child) {
+    margin-top: 1.6rem;
+  }
+}
+
+.button {
+  @include regular;
+
+  transition-duration: $transitionDuration;
+  transition-property: color;
+}
+
+.buttonActive {
+  color: $colorHighlightDark;
+  font-weight: 700;
+}

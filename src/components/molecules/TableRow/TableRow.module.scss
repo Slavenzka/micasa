@@ -1,0 +1,27 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+  position: relative;
+  display: grid;
+  align-items: flex-start;
+  padding: 2rem $paddingTableHor;
+  height: 100%;
+  background-color: $colorHighlightDarkLight;
+  transition-duration: $transitionDuration;
+}
+
+.wrapperHoverable {
+  &:hover {
+    box-shadow: 0 0.4rem 1rem 0 $colorBorderTable;
+    z-index: 2;
+  }
+}
+
+.wrapperOdd {
+  background-color: $colorLightest;
+}
+
+.wrapperWarning {
+  background-color: $colorBgWarning;
+}

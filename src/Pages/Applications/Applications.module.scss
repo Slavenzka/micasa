@@ -1,0 +1,23 @@
+.datePicker {
+  margin-left: 3rem;
+}
+
+.sort {
+  margin-left: auto;
+}
+
+.search {
+  margin-left: 2rem;
+}
+
+.columns {
+  grid-template-columns:
+    calc(136 / 1080 * 100%)
+    calc(76 / 1080 * 100%)
+    calc(114 / 1080 * 100%)
+    calc(146 / 1080 * 100%)
+    calc(275 / 1080 * 100%)
+    calc(126 / 1080 * 100%)
+    calc(100 / 1080 * 100%)
+    1fr;
+}

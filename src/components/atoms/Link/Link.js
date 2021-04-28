@@ -6,6 +6,7 @@ import { Link as LinkRouter } from 'react-router-dom'
 const Link = ({
   className,
   url = `#`,
+  isStrong,
   children,
   ...extraProps
 }) => {
@@ -32,7 +33,9 @@ const Link = ({
 
   return (
     <TagName
-      className={classnames(css.link, className)}
+      className={classnames(css.link, className, {
+        [css.linkStrong]: isStrong
+      })}
       {...props}
     >
       { children }

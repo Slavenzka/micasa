@@ -1,0 +1,39 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.wrapper {
+  background-color: $colorHighlightDark;
+  padding-bottom: 3.9rem;
+}
+
+.heading {
+  color: $colorLightest;
+}
+
+.table {
+  margin-top: 2.5rem;
+  border-collapse: collapse;
+}
+
+.row {
+  &:not(:last-child) {
+    .key,
+    .value {
+      padding-bottom: 1.6rem;
+    }
+  }
+}
+
+
+.key {
+  @include tableCell($colorLightest, 400);
+
+  width: 25%;
+}
+
+.value {
+  @include tableCell($colorLightest, 700);
+
+  padding-left: 5%;
+  text-align: right;
+}

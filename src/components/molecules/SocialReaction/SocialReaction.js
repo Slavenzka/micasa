@@ -14,7 +14,7 @@ const SocialReaction  = ({
   handleClickDislike,
   handleClickComment,
 }) => {
-  const {liked = 0, disliked = 0, comments = 0} = data
+  const {liked, disliked, comments} = data
 
   return (
     <ul className={classnames(css.list, className)}>
@@ -26,7 +26,7 @@ const SocialReaction  = ({
           height={ButtonHeights.CONTENT}
         >
           <IconLike className={classnames(css.icon, css.iconLike)} />
-          { liked }
+          { liked || '' }
         </Button>
       </li>
       <li className={css.item}>
@@ -37,7 +37,7 @@ const SocialReaction  = ({
           height={ButtonHeights.CONTENT}
         >
           <IconDislike className={classnames(css.icon, css.iconLike)} />
-          { disliked }
+          { disliked || '' }
         </Button>
       </li>
       <li className={css.item}>
@@ -48,7 +48,7 @@ const SocialReaction  = ({
           height={ButtonHeights.CONTENT}
         >
           <IconComment className={classnames(css.icon, css.iconLike)} />
-          { comments }
+          { comments || '' }
         </Button>
       </li>
     </ul>

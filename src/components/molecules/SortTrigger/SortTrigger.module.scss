@@ -1,0 +1,55 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.wrapper {
+  position: relative;
+}
+
+.button {
+  @include regular($colorRegularLightest);
+
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  width: 2.5rem;
+  fill: $colorHighlightDark;
+}
+
+.list {
+  @include resetList;
+
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  display: none;
+  flex-direction: column;
+  padding: 1.6rem;
+  width: max-content;
+  background-color: $colorLightest;
+  border-radius: 1rem;
+  box-shadow: 0 0.2rem 1rem $colorShadowRegular;
+  z-index: 1;
+}
+
+.item {
+  &:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+.listVisible {
+  display: flex;
+}
+
+.buttonSort {
+  @include regular;
+
+  transition-duration: $transitionDuration;
+
+  &:hover {
+    color: $colorHighlightDark;
+  }
+}

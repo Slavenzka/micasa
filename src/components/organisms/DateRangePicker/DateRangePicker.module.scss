@@ -1,0 +1,89 @@
+@import "styles/variables";
+@import "styles/mixins";
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  z-index: 5;
+}
+
+.wrapper {
+  position: relative;
+}
+
+.trigger {
+  @include resetButton;
+  @include regular;
+
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  .icon {
+    margin-right: 1rem;
+    width: 2rem;
+    fill: $colorHighlightDark;
+    transition-duration: $transitionDuration;
+  }
+
+  &:hover {
+    .icon {
+      fill: $colorFontHighlightDark;
+    }
+  }
+}
+
+.triggerDisabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.datepickerWrapper {
+  display: none;
+}
+
+.datepickerWrapperOpened {
+  position: absolute;
+  top: calc(100% + 1.3rem);
+  left: -6.5rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 64.4rem;
+  background-color: $colorBgLightest;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 1rem 0 rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+  z-index: 5;
+
+  .date {
+    position: static;
+  }
+}
+
+.controls {
+  padding: 2rem 2.4rem 3rem 0;
+}
+
+.button {
+  padding: 0 2rem;
+
+  &:not(:first-child) {
+    margin-left: 2rem;
+  }
+}
+
+.buttonCancel {
+  font-weight: 500;
+  color: $colorHighlightDark2;
+}
+
+.additionalBlock {
+  margin-right: auto;
+  padding: 1.6rem;
+  width: 14.4rem;
+}

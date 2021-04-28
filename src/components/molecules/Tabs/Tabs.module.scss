@@ -1,0 +1,10 @@
+@import "styles/mixins";
+
+.list {
+  @include resetList;
+
+  display: flex;
+  align-items: center;
+  border: 1px solid $colorRegularLightest;
+  border-radius: 2.25rem;
+}

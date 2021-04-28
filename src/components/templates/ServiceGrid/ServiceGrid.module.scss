@@ -1,0 +1,10 @@
+@import "styles/mixins";
+
+.wrapper {
+  @include resetList;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 24rem;
+  grid-gap: 3rem;
+}

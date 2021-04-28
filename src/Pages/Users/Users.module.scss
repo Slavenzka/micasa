@@ -1,0 +1,8 @@
+.columns {
+  grid-template-columns:
+    calc(272 / 1080 * 100%)
+    calc(301 / 1080 * 100%)
+    calc(264 / 1080 * 100%)
+    calc(157 / 1080 * 100%)
+    repeat(2, 1fr);
+}
